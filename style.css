@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #2F4F4F;
+  background-color: #FFFAF0; /* Light beige background for a softer look */
   color: #333;
   display: flex;
   flex-direction: column;
@@ -16,26 +16,27 @@ body {
 
 header {
   width: 100%;
-  max-width: 800px;
+  max-width: 500px;
   text-align: center;
   margin-bottom: 20px;
 }
 
 header h1 {
   font-size: 2em;
-  color: #4a4e69;
+  color: #FF6347; /* Tomato red for header text */
 }
+
 .account-sections {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   width: 100%;
-  max-width: 800px;
+  max-width: 500px;
 }
 
 .section {
-  background-color: #fff;
-  border: 2px solid #4a4e69;
+  background-color: #FFFFFF;
+  border: 2px solid #FF6347; /* Tomato red border for consistency */
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -47,22 +48,22 @@ header h1 {
 .section:hover {
   transform: translateY(-5px);
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  border-color: #22223b;
+  border-color: #FF4500; /* Darker orange on hover */
 }
 
 .icon {
   font-size: 2.5em;
-  color: #4a4e69;
+  color: #FF6347;
   margin-right: 15px;
 }
 
 .text h3 {
   font-size: 1.2em;
-  color: #22223b;
+  color: #333333;
   margin-bottom: 5px;
 }
 
 .text p {
   font-size: 0.9em;
-  color: #4a4e69;
+  color: #696969;
 }
