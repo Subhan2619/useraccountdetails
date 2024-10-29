@@ -9,73 +9,75 @@
 <body>
 
   <header>
-    <h1>User Account Details</h1>
-    <nav>
-      <a href="#account-info">Account Information</a>
-      <a href="#order-history">Order History</a>
-      <a href="#saved-items">Saved Items</a>
-      <a href="#payment-methods">Payment Methods</a>
-      <a href="#addresses">Addresses</a>
-      <a href="#account-security">Account Security</a>
-    </nav>
+    <h1>User Account</h1>
   </header>
 
-  <main>
-    <!-- Account Information Section -->
-    <section id="account-info">
-      <h2>Account Information</h2>
-      <p><strong>Name:</strong> John Doe</p>
-      <p><strong>Email:</strong> johndoe@example.com</p>
-      <p><strong>Membership:</strong> Prime Member since 2020</p>
-    </section>
+  <div class="container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <nav>
+        <a href="#account-info" onclick="showSection('account-info')">Account Information</a>
+        <a href="#order-history" onclick="showSection('order-history')">Order History</a>
+        <a href="#saved-items" onclick="showSection('saved-items')">Saved Items</a>
+        <a href="#payment-methods" onclick="showSection('payment-methods')">Payment Methods</a>
+        <a href="#addresses" onclick="showSection('addresses')">Addresses</a>
+        <a href="#account-security" onclick="showSection('account-security')">Account Security</a>
+      </nav>
+    </aside>
 
-    <!-- Order History Section -->
-    <section id="order-history">
-      <h2>Order History</h2>
-      <ul>
-        <li><strong>Order #123456:</strong> Delivered - Book, Earbuds, Laptop Stand</li>
-        <li><strong>Order #654321:</strong> Delivered - Phone Case, Screen Protector</li>
-        <li><strong>Order #789123:</strong> In Transit - Fitness Band, Water Bottle</li>
-      </ul>
-    </section>
+    <!-- Main Content Area -->
+    <main>
+      <section id="account-info">
+        <h2>Account Information</h2>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Email:</strong> johndoe@example.com</p>
+        <p><strong>Membership:</strong> Prime Member since 2020</p>
+      </section>
 
-    <!-- Saved Items/Wishlist Section -->
-    <section id="saved-items">
-      <h2>Saved Items</h2>
-      <ul>
-        <li>Bluetooth Speaker</li>
-        <li>Noise-Canceling Headphones</li>
-        <li>Smart Watch</li>
-      </ul>
-    </section>
+      <section id="order-history">
+        <h2>Order History</h2>
+        <ul>
+          <li><strong>Order #123456:</strong> Delivered - Book, Earbuds, Laptop Stand</li>
+          <li><strong>Order #654321:</strong> Delivered - Phone Case, Screen Protector</li>
+          <li><strong>Order #789123:</strong> In Transit - Fitness Band, Water Bottle</li>
+        </ul>
+      </section>
 
-    <!-- Payment Methods Section -->
-    <section id="payment-methods">
-      <h2>Payment Methods</h2>
-      <ul>
-        <li><strong>Visa:</strong> **** **** **** 1234 - Expires 12/25</li>
-        <li><strong>MasterCard:</strong> **** **** **** 5678 - Expires 06/24</li>
-        <li><strong>PayPal:</strong> johndoe@example.com</li>
-      </ul>
-    </section>
+      <section id="saved-items">
+        <h2>Saved Items</h2>
+        <ul>
+          <li>Bluetooth Speaker</li>
+          <li>Noise-Canceling Headphones</li>
+          <li>Smart Watch</li>
+        </ul>
+      </section>
 
-    <!-- Addresses Section -->
-    <section id="addresses">
-      <h2>Addresses</h2>
-      <p><strong>Primary Address:</strong></p>
-      <p>123 Main St, Suite 500, Springfield, IL, 62701</p>
-      <p><strong>Billing Address:</strong></p>
-      <p>789 Maple Ave, Apartment 12B, Anytown, TX, 75123</p>
-    </section>
+      <section id="payment-methods">
+        <h2>Payment Methods</h2>
+        <ul>
+          <li><strong>Visa:</strong> **** **** **** 1234 - Expires 12/25</li>
+          <li><strong>MasterCard:</strong> **** **** **** 5678 - Expires 06/24</li>
+          <li><strong>PayPal:</strong> johndoe@example.com</li>
+        </ul>
+      </section>
 
-    <!-- Account Security Section -->
-    <section id="account-security">
-      <h2>Account Security</h2>
-      <p><strong>Password:</strong> *********</p>
-      <p><strong>Two-Factor Authentication:</strong> Enabled</p>
-      <p><strong>Login History:</strong> Last login from Springfield, IL</p>
-    </section>
-  </main>
+      <section id="addresses">
+        <h2>Addresses</h2>
+        <p><strong>Primary Address:</strong></p>
+        <p>123 Main St, Suite 500, Springfield, IL, 62701</p>
+        <p><strong>Billing Address:</strong></p>
+        <p>789 Maple Ave, Apartment 12B, Anytown, TX, 75123</p>
+      </section>
 
+      <section id="account-security">
+        <h2>Account Security</h2>
+        <p><strong>Password:</strong> *********</p>
+        <p><strong>Two-Factor Authentication:</strong> Enabled</p>
+        <p><strong>Login History:</strong> Last login from Springfield, IL</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
