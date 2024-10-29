@@ -1,60 +1,69 @@
-/* Modal styling */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
+body {
+  background-color: #FFFAF0; /* Light beige background for a softer look */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-  border: 2px solid #4a4e69;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 400px;
-  text-align: center;
 }
 
-.modal-content h2 {
-  color: #4a4e69;
-  margin-bottom: 10px;
-}
-
-.modal-content input {
+header {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #4a4e69;
-  border-radius: 5px;
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.modal-content button {
-  background-color: #4a4e69;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+header h1 {
+  font-size: 2em;
+  color: #FF6347; /* Tomato red for header text */
+}
+
+.account-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.section {
+  background-color: #FFFFFF;
+  border: 2px solid #FF6347; /* Tomato red border for consistency */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
-  font-size: 1em;
 }
 
-.modal-content button:hover {
-  background-color: #22223b;
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  border-color: #FF4500; /* Darker orange on hover */
 }
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 1.5em;
-  cursor: pointer;
+.icon {
+  font-size: 2.5em;
+  color: #FF6347;
+  margin-right: 15px;
 }
 
-.close:hover {
-  color: #000;
+.text h3 {
+  font-size: 1.2em;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+.text p {
+  font-size: 0.9em;
+  color: #696969;
 }
