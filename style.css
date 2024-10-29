@@ -35,7 +35,7 @@ header h1 {
 }
 
 .section {
-  background-color: #FFFFFF;
+  background-color: #4682B4;
   border: 2px solid #FF6347; /* Tomato red border for consistency */
   border-radius: 10px;
   display: flex;
