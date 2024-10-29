@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="addressSection">
       <div class="icon">🏠</div>
       <div class="text">
         <h3>Your Addresses</h3>
@@ -44,6 +44,27 @@
         <p>View all transactions, manage payment methods, and settings</p>
       </div>
     </div>
+
+    <div class="section delete-account">
+      <div class="icon">⚠️</div>
+      <div class="text">
+        <h3>Delete Account</h3>
+        <p>Permanently delete your account and all associated data</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Address Modal Popup -->
+  <div class="modal" id="addressModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Edit Your Address</h2>
+      <input type="text" id="addressInput" placeholder="Enter your address">
+      <button onclick="saveAddress()">Save Address</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
