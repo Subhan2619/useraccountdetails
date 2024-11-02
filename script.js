@@ -1,28 +1,57 @@
-// Get modal and address section elements
-const addressModal = document.getElementById("addressModal");
-const addressSection = document.getElementById("addressSection");
-const closeModal = document.getElementById("closeModal");
+<script>
+    // Select all account option elements
+    const accountOptions = document.querySelectorAll('.account-option');
+    const helpButton = document.querySelector('.help-button');
 
-// Open modal when "Your Addresses" section is clicked
-addressSection.addEventListener("click", () => {
-  addressModal.style.display = "block";
-});
+    // Loop through each account option
+    accountOptions.forEach((option, index) => {
+        // Add click event listener
+        option.addEventListener('click', () => {
+            // Alternate colors for clicked items
+            if (index % 2 === 0) {
+                option.style.backgroundColor = '#2A9D8F'; // Greenish color for even options
+            } else {
+                option.style.backgroundColor = '#E76F51'; // Red-orange color for odd options
+            }
 
-// Close modal when "X" is clicked
-closeModal.addEventListener("click", () => {
-  addressModal.style.display = "none";
-});
+            // Show an alert describing the functionality of each option
+            let message;
+            switch (index) {
+                case 0:
+                    message = "Your Orders: Track, return, or cancel an order.";
+                    break;
+                case 1:
+                    message = "Login & Security: Edit login, name, and mobile number.";
+                    break;
+                case 2:
+                    message = "Your Addresses: Edit, remove, or set a default address.";
+                    break;
+                case 3:
+                    message = "Your Payments: Manage transactions, payment methods, and settings.";
+                    break;
+                case 4:
+                    message = "Delete Account: Permanently delete your account.";
+                    break;
+                default:
+                    message = "Unknown option.";
+            }
+            alert(message);
+        });
 
-// Close modal when clicking outside of modal content
-window.addEventListener("click", (event) => {
-  if (event.target === addressModal) {
-    addressModal.style.display = "none";
-  }
-});
+        // Reset background color on mouseout
+        option.addEventListener('mouseout', () => {
+            option.style.backgroundColor = (index % 2 === 0) ? '#007BFF' : '#FF6347';
+        });
+    });
 
-// Function to handle saving the address (can be expanded for actual save functionality)
-function saveAddress() {
-  const address = document.getElementById("addressInput").value;
-  alert("Address saved: " + address); // Placeholder for saving address functionality
-  addressModal.style.display = "none"; // Close modal after saving
-}
+    // Help button functionality
+    helpButton.addEventListener('click', () => {
+        alert("Need Help? This section allows you to manage your account settings. Select any option above to view and modify details.");
+        helpButton.style.backgroundColor = '#218838'; // Change color on click
+    });
+
+    // Reset Help button color on mouseout
+    helpButton.addEventListener('mouseout', () => {
+        helpButton.style.backgroundColor = '#28a745';
+    });
+</script>
