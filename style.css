@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3f1e9;
+    background-color: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,8 +15,12 @@ body {
 
 .account-container {
     text-align: center;
-    width: 90%;
+    width: 100%;
     max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -35,27 +39,28 @@ h1 {
     display: flex;
     align-items: center;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     color: white;
     font-weight: bold;
-    background-color: #4A90E2;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .account-option:hover {
-    background-color: #357ABD;
+    transform: scale(1.05);
 }
 
 .account-option.left {
     justify-content: flex-start;
     padding-left: 30px;
-    background-color: #007BFF;
+    background-color: #4caf50; /* Green color */
 }
 
 .account-option.right {
     justify-content: flex-end;
     padding-right: 30px;
-    background-color: #FF6347;
+    background-color: #03a9f4; /* Blue color */
 }
 
 .icon {
@@ -79,6 +84,7 @@ h2 {
 p {
     font-size: 0.9rem;
     font-weight: normal;
+    color: #f1f1f1;
 }
 
 /* Help Button Styles */
@@ -88,13 +94,22 @@ p {
     font-size: 1rem;
     font-weight: bold;
     color: #fff;
-    background-color: #28a745; /* Green color for Help button */
+    background-color: #ff5722; /* Orange color for Help button */
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .help-button:hover {
-    background-color: #218838;
+    background-color: #e64a19;
+    transform: scale(1.1);
+}
+
+/* Active class styling */
+.account-option.active {
+    border: 2px solid #ffeb3b;
+    background-color: #ffeb3b;
+    color: #333;
 }
