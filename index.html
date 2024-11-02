@@ -12,32 +12,42 @@
         <h1>Your Account</h1>
         <div class="account-section">
             <div class="account-item" id="orders">
-                <img src="https://img.icons8.com/ios/50/000000/box--v1.png" alt="Orders">
+                <img src="https://img.icons8.com/ios-filled/50/4a90e2/box.png" alt="Orders">
                 <h2>Your Orders</h2>
-                <p>Track, return, cancel an order, download invoices, or buy again.</p>
+                <p>Track, return, or buy again.</p>
             </div>
             <div class="account-item" id="login-security">
-                <img src="https://img.icons8.com/ios/50/000000/lock--v1.png" alt="Login & Security">
+                <img src="https://img.icons8.com/ios-filled/50/4a90e2/security-shield-green.png" alt="Login & Security">
                 <h2>Login & Security</h2>
                 <p>Edit login, name, and mobile number.</p>
             </div>
-            <div class="account-item" id="addresses">
-                <img src="https://img.icons8.com/ios/50/000000/home--v1.png" alt="Addresses">
+            <div class="account-item" id="addresses" onclick="editAddress()">
+                <img src="https://img.icons8.com/ios-filled/50/4a90e2/home-address.png" alt="Addresses">
                 <h2>Your Addresses</h2>
-                <p>Edit, remove, or set a default address.</p>
+                <p>Edit or set default address.</p>
             </div>
             <div class="account-item" id="payments">
-                <img src="https://img.icons8.com/ios/50/000000/credit-card.png" alt="Payments">
+                <img src="https://img.icons8.com/ios-filled/50/4a90e2/credit-card.png" alt="Payments">
                 <h2>Your Payments</h2>
-                <p>View all transactions, manage payment methods, and settings.</p>
+                <p>Manage payment methods and settings.</p>
             </div>
-            <div class="account-item" id="delete-account">
-                <img src="https://img.icons8.com/ios/50/000000/warning-shield.png" alt="Delete Account">
-                <h2>Delete Account</h2>
-                <p>Permanently delete your account and all associated data.</p>
+            <div class="account-item" id="gift-cards">
+                <img src="https://img.icons8.com/ios-filled/50/4a90e2/gift.png" alt="Gift Cards">
+                <h2>Gift Cards</h2>
+                <p>Redeem or view balance.</p>
             </div>
         </div>
-        <button class="help-btn">Help</button>
+    </div>
+
+    <!-- Address Modal -->
+    <div id="address-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Update Address</h2>
+            <label for="address-input">New Address:</label>
+            <input type="text" id="address-input" placeholder="Enter your address">
+            <button id="save-address-btn">Save Address</button>
+        </div>
     </div>
 </body>
 </html>
