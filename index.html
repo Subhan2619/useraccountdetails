@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Account</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -52,9 +53,8 @@
         .account-button:active {
             background-color: #004a94;
         }
-        .account-button img {
-            width: 24px;
-            height: 24px;
+        .material-icons {
+            font-size: 24px;
             margin-right: 10px;
         }
         .full-width {
@@ -67,19 +67,19 @@
         <h2 class="account-title">Your Account</h2>
         <div class="button-grid">
             <button class="account-button full-width" onclick="alert('Navigating to Your Orders')">
-                <img src="https://via.placeholder.com/24" alt="Orders Icon"> Your Orders
+                <span class="material-icons">shopping_cart</span> Your Orders
             </button>
             <button class="account-button full-width" onclick="alert('Navigating to Login & Security')">
-                <img src="https://via.placeholder.com/24" alt="Security Icon"> Login & Security
+                <span class="material-icons">security</span> Login & Security
             </button>
             <button class="account-button full-width" onclick="alert('Navigating to Address Management')">
-                <img src="https://via.placeholder.com/24" alt="Address Icon"> Your Address
+                <span class="material-icons">home</span> Your Address
             </button>
             <button class="account-button full-width" onclick="alert('Navigating to Your Payments')">
-                <img src="https://via.placeholder.com/24" alt="Payments Icon"> Your Payments
+                <span class="material-icons">credit_card</span> Your Payments
             </button>
             <button class="account-button full-width" onclick="alert('Opening Help & Support')">
-                <img src="https://via.placeholder.com/24" alt="Help Icon"> Help & Support
+                <span class="material-icons">help</span> Help & Support
             </button>
         </div>
     </div>
