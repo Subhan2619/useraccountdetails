@@ -5,49 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Account</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script> <!-- JavaScript file link with defer attribute -->
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="account-container">
+    <div class="container">
         <h1>Your Account</h1>
-        <div class="account-options">
-            <div class="account-option left">
-                <div class="icon">📦</div>
-                <div class="option-text">
-                    <h2>Your Orders</h2>
-                    <p>Track, return, cancel an order, download invoices, or buy again</p>
-                </div>
+        <div class="account-section">
+            <div class="account-item" id="orders">
+                <img src="https://img.icons8.com/ios/50/000000/box--v1.png" alt="Orders">
+                <h2>Your Orders</h2>
+                <p>Track, return, cancel an order, download invoices, or buy again.</p>
             </div>
-            <div class="account-option right">
-                <div class="icon">🔒</div>
-                <div class="option-text">
-                    <h2>Login & Security</h2>
-                    <p>Edit login, name, and mobile number</p>
-                </div>
+            <div class="account-item" id="login-security">
+                <img src="https://img.icons8.com/ios/50/000000/lock--v1.png" alt="Login & Security">
+                <h2>Login & Security</h2>
+                <p>Edit login, name, and mobile number.</p>
             </div>
-            <div class="account-option left">
-                <div class="icon">🏠</div>
-                <div class="option-text">
-                    <h2>Your Addresses</h2>
-                    <p>Edit, remove, or set a default address</p>
-                </div>
+            <div class="account-item" id="addresses">
+                <img src="https://img.icons8.com/ios/50/000000/home--v1.png" alt="Addresses">
+                <h2>Your Addresses</h2>
+                <p>Edit, remove, or set a default address.</p>
             </div>
-            <div class="account-option right">
-                <div class="icon">💳</div>
-                <div class="option-text">
-                    <h2>Your Payments</h2>
-                    <p>View all transactions, manage payment methods, and settings</p>
-                </div>
+            <div class="account-item" id="payments">
+                <img src="https://img.icons8.com/ios/50/000000/credit-card.png" alt="Payments">
+                <h2>Your Payments</h2>
+                <p>View all transactions, manage payment methods, and settings.</p>
             </div>
-            <div class="account-option left">
-                <div class="icon">⚠️</div>
-                <div class="option-text">
-                    <h2>Delete Account</h2>
-                    <p>Permanently delete your account and all associated data</p>
-                </div>
+            <div class="account-item" id="delete-account">
+                <img src="https://img.icons8.com/ios/50/000000/warning-shield.png" alt="Delete Account">
+                <h2>Delete Account</h2>
+                <p>Permanently delete your account and all associated data.</p>
             </div>
         </div>
-        <button class="help-button">Help</button>
+        <button class="help-btn">Help</button>
     </div>
 </body>
 </html>
