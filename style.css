@@ -16,7 +16,7 @@ body {
 .account-container {
     text-align: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     padding: 20px;
     background-color: #fff;
     border-radius: 12px;
@@ -33,42 +33,42 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    align-items: center;
 }
 
 .account-option {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 90%;
     padding: 15px;
     border-radius: 10px;
     color: white;
     font-weight: bold;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .account-option:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .account-option.left {
     justify-content: flex-start;
-    padding-left: 30px;
+    padding-left: 20px;
     background-color: #4caf50; /* Green color */
 }
 
 .account-option.right {
     justify-content: flex-end;
-    padding-right: 30px;
+    padding-right: 20px;
     background-color: #03a9f4; /* Blue color */
 }
 
 .icon {
     font-size: 2rem;
-    margin-right: 10px;
-}
-
-.account-option.left .icon {
     margin-right: 15px;
 }
 
@@ -77,14 +77,16 @@ h1 {
     margin-right: 0;
 }
 
-h2 {
+.option-text h2 {
     font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
-p {
+.option-text p {
     font-size: 0.9rem;
     font-weight: normal;
     color: #f1f1f1;
+    max-width: 90%;
 }
 
 /* Help Button Styles */
