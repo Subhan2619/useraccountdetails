@@ -4,59 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Account</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* General Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background-color: #f1f1f1;
+            background-color: #f9fafb;
             margin: 0;
         }
+        
         .account-container {
             background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 25px;
             max-width: 500px;
             width: 100%;
             text-align: center;
         }
+        
+        /* Title Styling */
         .account-title {
-            font-size: 24px;
+            font-size: 26px;
+            font-weight: 600;
             margin-bottom: 20px;
-            color: #333333;
+            color: #2a9d8f; /* Vibrant teal color */
         }
+
+        /* Button Grid Styling */
         .button-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
         }
+
+        /* Button Styling */
         .account-button {
             background-color: #0073e6;
             color: #ffffff;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             padding: 15px;
             font-size: 16px;
+            font-weight: 500;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.2s;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: left;
         }
+
         .account-button:hover {
             background-color: #005bb5;
+            transform: translateY(-3px);
         }
+
         .account-button:active {
             background-color: #004a94;
+            transform: translateY(1px);
         }
-        .material-icons {
+
+        /* Icon Styling */
+        .account-button i {
             font-size: 24px;
-            margin-right: 10px;
+            margin-right: 12px;
+            transition: transform 0.3s, color 0.3s;
         }
+
+        .account-button:hover i {
+            color: #ffcc00; /* Change icon color on hover */
+            transform: scale(1.2);
+        }
+
+        /* Full-width Button */
         .full-width {
             grid-column: span 2;
         }
@@ -67,21 +95,24 @@
         <h2 class="account-title">Your Account</h2>
         <div class="button-grid">
             <button class="account-button full-width" onclick="alert('Navigating to Your Orders')">
-                <span class="material-icons">shopping_cart</span> Your Orders
+                <i class="fas fa-shopping-cart"></i> Your Orders
             </button>
             <button class="account-button full-width" onclick="alert('Navigating to Login & Security')">
-                <span class="material-icons">security</span> Login & Security
+                <i class="fas fa-user-shield"></i> Login & Security
             </button>
             <button class="account-button full-width" onclick="alert('Navigating to Address Management')">
-                <span class="material-icons">home</span> Your Address
+                <i class="fas fa-map-marker-alt"></i> Your Address
             </button>
             <button class="account-button full-width" onclick="alert('Navigating to Your Payments')">
-                <span class="material-icons">credit_card</span> Your Payments
+                <i class="fas fa-credit-card"></i> Your Payments
             </button>
             <button class="account-button full-width" onclick="alert('Opening Help & Support')">
-                <span class="material-icons">help</span> Help & Support
+                <i class="fas fa-life-ring"></i> Help & Support
             </button>
         </div>
     </div>
+
+    <!-- Font Awesome Script for Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>
