@@ -1,73 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Account Page</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <header>
-    <h1>Your Account</h1>
-  </header>
-
-  <div class="account-sections">
-    <div class="section">
-      <div class="icon">📦</div>
-      <div class="text">
-        <h3>Your Orders</h3>
-        <p>Track, return, cancel an order, download invoices, or buy again</p>
-      </div>
+    <div class="account-container">
+        <h1>Your Account</h1>
+        <div class="account-options">
+            <div class="account-option left">
+                <div class="icon">📦</div>
+                <div>
+                    <h2>Your Orders</h2>
+                    <p>Track, return, cancel an order, download invoices, or buy again</p>
+                </div>
+            </div>
+            <div class="account-option right">
+                <div class="icon">🔒</div>
+                <div>
+                    <h2>Login & Security</h2>
+                    <p>Edit login, name, and mobile number</p>
+                </div>
+            </div>
+            <div class="account-option left">
+                <div class="icon">🏠</div>
+                <div>
+                    <h2>Your Addresses</h2>
+                    <p>Edit, remove, or set a default address</p>
+                </div>
+            </div>
+            <div class="account-option right">
+                <div class="icon">💳</div>
+                <div>
+                    <h2>Your Payments</h2>
+                    <p>View all transactions, manage payment methods, and settings</p>
+                </div>
+            </div>
+            <div class="account-option left">
+                <div class="icon">⚠️</div>
+                <div>
+                    <h2>Delete Account</h2>
+                    <p>Permanently delete your account and all associated data</p>
+                </div>
+            </div>
+        </div>
+        <button class="help-button">Help</button>
     </div>
-
-    <div class="section">
-      <div class="icon">🔐</div>
-      <div class="text">
-        <h3>Login & Security</h3>
-        <p>Edit login, name, and mobile number</p>
-      </div>
-    </div>
-
-    <!-- Your Addresses Section with Click Event -->
-    <div class="section" id="addressSection">
-      <div class="icon">🏠</div>
-      <div class="text">
-        <h3>Your Addresses</h3>
-        <p>Edit, remove, or set a default address</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="icon">💳</div>
-      <div class="text">
-        <h3>Your Payments</h3>
-        <p>View all transactions, manage payment methods, and settings</p>
-      </div>
-    </div>
-
-
-    <!-- Delete Account Section -->
-    <div class="section delete-account">
-      <div class="icon">⚠️</div>
-      <div class="text">
-        <h3>Delete Account</h3>
-        <p>Permanently delete your account and all associated data</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Address Modal Popup -->
-  <div class="modal" id="addressModal">
-    <div class="modal-content">
-      <span class="close" id="closeModal">&times;</span>
-      <h2>Edit Your Address</h2>
-      <input type="text" id="addressInput" placeholder="Enter your address">
-      <button onclick="saveAddress()">Save Address</button>
-    </div>
-  </div>
-
- 
 </body>
 </html>
