@@ -1,57 +1,25 @@
-<script>
-    // Select all account option elements
-    const accountOptions = document.querySelectorAll('.account-option');
-    const helpButton = document.querySelector('.help-button');
+// Wait for the DOM to load before running the script
+document.addEventListener("DOMContentLoaded", () => {
+    // Select all account options
+    const accountOptions = document.querySelectorAll(".account-option");
+    const helpButton = document.querySelector(".help-button");
 
-    // Loop through each account option
+    // Add click event listeners to each account option
     accountOptions.forEach((option, index) => {
-        // Add click event listener
-        option.addEventListener('click', () => {
-            // Alternate colors for clicked items
-            if (index % 2 === 0) {
-                option.style.backgroundColor = '#2A9D8F'; // Greenish color for even options
-            } else {
-                option.style.backgroundColor = '#E76F51'; // Red-orange color for odd options
-            }
+        option.addEventListener("click", () => {
+            // Toggle active state for clicked option
+            accountOptions.forEach(opt => opt.classList.remove("active"));
+            option.classList.add("active");
 
-            // Show an alert describing the functionality of each option
-            let message;
-            switch (index) {
-                case 0:
-                    message = "Your Orders: Track, return, or cancel an order.";
-                    break;
-                case 1:
-                    message = "Login & Security: Edit login, name, and mobile number.";
-                    break;
-                case 2:
-                    message = "Your Addresses: Edit, remove, or set a default address.";
-                    break;
-                case 3:
-                    message = "Your Payments: Manage transactions, payment methods, and settings.";
-                    break;
-                case 4:
-                    message = "Delete Account: Permanently delete your account.";
-                    break;
-                default:
-                    message = "Unknown option.";
-            }
-            alert(message);
-        });
-
-        // Reset background color on mouseout
-        option.addEventListener('mouseout', () => {
-            option.style.backgroundColor = (index % 2 === 0) ? '#007BFF' : '#FF6347';
+            // Display a unique alert message based on the selected option
+            const optionText = option.querySelector("h2").innerText;
+            alert(`You selected: ${optionText}`);
         });
     });
 
-    // Help button functionality
-    helpButton.addEventListener('click', () => {
-        alert("Need Help? This section allows you to manage your account settings. Select any option above to view and modify details.");
-        helpButton.style.backgroundColor = '#218838'; // Change color on click
+    // Help button click event
+    helpButton.addEventListener("click", () => {
+        // Display a help message or guide
+        alert("Need help? Here you can manage your account, including orders, login security, addresses, payments, or deleting your account.");
     });
-
-    // Reset Help button color on mouseout
-    helpButton.addEventListener('mouseout', () => {
-        helpButton.style.backgroundColor = '#28a745';
-    });
-</script>
+});
