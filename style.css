@@ -2,117 +2,86 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    background-color: #f0f2f5;
 }
 
-.account-container {
+.container {
     text-align: center;
-    width: 100%;
-    max-width: 700px;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 h1 {
-    color: #ff6f61;
+    font-size: 2rem;
+    color: #333;
     margin-bottom: 20px;
-    font-size: 2rem;
 }
 
-.account-options {
-    display: flex;
-    flex-direction: column;
+.account-section {
+    display: grid;
     gap: 15px;
-    align-items: center;
+    grid-template-columns: 1fr;
 }
 
-.account-option {
+.account-item {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 90%;
     padding: 15px;
-    border-radius: 10px;
+    background-color: #0073e6;
     color: white;
-    font-weight: bold;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.account-option:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.account-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 115, 230, 0.2);
 }
 
-.account-option.left {
-    justify-content: flex-start;
-    padding-left: 20px;
-    background-color: #4caf50; /* Green color */
-}
-
-.account-option.right {
-    justify-content: flex-end;
-    padding-right: 20px;
-    background-color: #03a9f4; /* Blue color */
-}
-
-.icon {
-    font-size: 2rem;
+.account-item img {
+    width: 50px;
+    height: 50px;
     margin-right: 15px;
 }
 
-.account-option.right .icon {
-    margin-left: 15px;
-    margin-right: 0;
-}
-
-.option-text h2 {
+.account-item h2 {
     font-size: 1.2rem;
-    margin-bottom: 5px;
+    margin: 0;
+    flex-grow: 1;
 }
 
-.option-text p {
+.account-item p {
     font-size: 0.9rem;
-    font-weight: normal;
-    color: #f1f1f1;
-    max-width: 90%;
+    color: #e0f2ff;
 }
 
-/* Help Button Styles */
-.help-button {
+.help-btn {
     margin-top: 20px;
-    padding: 12px 25px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #ff5722; /* Orange color for Help button */
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.help-button:hover {
-    background-color: #e64a19;
-    transform: scale(1.1);
-}
-
-/* Active class styling */
-.account-option.active {
-    border: 2px solid #ffeb3b;
-    background-color: #ffeb3b;
-    color: #333;
+.help-btn:hover {
+    background-color: #cc7a00;
+    transform: translateY(-3px);
 }
 
