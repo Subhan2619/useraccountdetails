@@ -1,25 +1,14 @@
-// Wait for the DOM to load before running the script
-document.addEventListener("DOMContentLoaded", () => {
-    // Select all account options
-    const accountOptions = document.querySelectorAll(".account-option");
-    const helpButton = document.querySelector(".help-button");
-
-    // Add click event listeners to each account option
-    accountOptions.forEach((option, index) => {
-        option.addEventListener("click", () => {
-            // Toggle active state for clicked option
-            accountOptions.forEach(opt => opt.classList.remove("active"));
-            option.classList.add("active");
-
-            // Display a unique alert message based on the selected option
-            const optionText = option.querySelector("h2").innerText;
-            alert(`You selected: ${optionText}`);
+document.addEventListener("DOMContentLoaded", function() {
+    const accountItems = document.querySelectorAll(".account-item");
+    
+    accountItems.forEach(item => {
+        item.addEventListener("click", () => {
+            alert(`You selected: ${item.querySelector("h2").innerText}`);
         });
     });
-
-    // Help button click event
+    
+    const helpButton = document.querySelector(".help-btn");
     helpButton.addEventListener("click", () => {
-        // Display a help message or guide
-        alert("Need help? Here you can manage your account, including orders, login security, addresses, payments, or deleting your account.");
+        alert("How can we assist you?");
     });
 });
