@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             accountOptions.forEach(opt => opt.classList.remove("active"));
             option.classList.add("active");
 
+        
             // Display a unique alert message based on the selected option
             const optionText = option.querySelector("h2").innerText;
             alert(`You selected: ${optionText}`);
